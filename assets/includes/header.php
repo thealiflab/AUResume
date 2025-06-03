@@ -79,13 +79,29 @@ require "./assets/class/functions.php";
             color: white;
         }
 
-        .reg-button{
+        .action-button{
             margin-right: 20px;
             margin-left: 20px;
         }
         .alt-action{
             margin-right: 20px;
             margin-left: 20px;
+        }
+
+        .alert {
+            padding-top: 15px 20px;
+            margin: 20px;
+            max-width: 450px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .alert-danger {
+            color: #842029;
+            background-color: #f8d7da;
+            border-color: #f5c2c7;
         }
 
     </style>

@@ -12,6 +12,18 @@ class Functions{
         $_SESSION['error']= $msg;
     }
 
+    public function setAuth ($data){
+        $_SESSION['Auth']= $data;
+    }
+
+    public function auth (){
+        if(isset($_SESSION['Auth'])){
+            return $_SESSION['Auth'];
+        }else{
+            return false;
+        }
+    }
+
     public function error ($msg){
         if(isset($_SESSION['error'])){
             echo "$_SESSION[error]";

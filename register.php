@@ -1,5 +1,5 @@
 <?php
-    $title = "Sign Up | AU Resume";
+    $title = "Register | AU Resume";
     require "./assets/includes/header.php";
 ?>
 
@@ -15,13 +15,8 @@
                 <h3>Create an account</h3>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" name="first_name" placeholder="" required>
-                    <label for="floatingInput"><i class="fa-solid fa-user"></i> First Name</label>
-                </div>
-
-                <div class="form-floating">
-                    <input type="text" class="form-control" name="last_name" placeholder="" required>
-                    <label for="floatingInput"><i class="fa-solid fa-user"></i> Last Name</label>
+                    <input type="text" class="form-control" name="full_name" placeholder="" required>
+                    <label for="floatingInput"><i class="fa-solid fa-user"></i> Full Name</label>
                 </div>
 
                 <div class="form-floating">
@@ -34,22 +29,26 @@
                 </div>
 
 
-                <div class="reg-button">
+                <div class="action-button">
                     <button class="btn btn-primary w-100 py-2" type="submit"><i class="fa-solid fa-user-plus icon-white"></i> Register
                     </button>
                 </div>
                 
 
                 <div class="d-flex justify-content-between my-3 alt-action">
-                    <a href="" class="text-decoration-none"><i class="fa-solid fa-lock-open"></i>&nbsp;Forgot Password</a>
+                    <!-- <a href="./forget-password.php" class="text-decoration-none"><i class="fa-solid fa-lock-open"></i>&nbsp;Forgot Password</a> -->
                     <a href="./login.php" class="text-decoration-none"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a>
                 </div>
-
-                
 
 
             </form>
         </main>
+        <?php
+            if (isset($_SESSION['error'])) {
+            echo '<br><div class="alert alert-danger m-auto">'.$_SESSION['error'].'</div>';
+            unset($_SESSION['error']);
+        } 
+        ?>
 
     </div>
 
